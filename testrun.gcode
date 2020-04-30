@@ -1,5 +1,5 @@
 %
-O0001(MAINCLEANER)
+O0001(Test Run, quicker)
 (HOW LONG UNTIL ABS YIELDS TO BLEACH? LET'S FIND OUT)
 (This assumes HOME (0,0,0) is front left corner, with head at bottom)
 (extents are x,y,z = (500mm, 410mm, 75mm))
@@ -10,7 +10,7 @@ M97 P04 L50 (machine doesn't get this)
 N10 G01 Z74 F1000 (Loop here: initial raise)
 G01 X10 Y205 F1000 (go to bleach bath)
 G01 Z40 F1000 (Dunk in bleach)
-G4 P300 (Wait 5 minutes s)
+G4 P10 (Wait 5 minutes s)
 G01 Z74 F1000 (Raise)
 G4 P10 (Wait 10 seconds)
 G01 X350 F1000 (go to water rinse)
@@ -24,4 +24,4 @@ G00 Z40
 G00 Z60
 G00 Z40
 G01 Z74 F1000 (Raise for dry)
-G4 P300 (wait 5 minutes for dry)
+G4 P10 (wait 5 minutes for dry)

@@ -6,3 +6,22 @@ Jake:
 * time is in ms
 * pos in mm
 * https://nraynaud.github.io/webgcode/
+
+apr 30
+====
+* cnc interface:
+	* pronterface
+	* (needs serial server running) http://chilipeppr.com/tinyg
+* extents:
+	* z: 75mm.
+		* 0 = bottom
+		* 75 = top
+	* x:
+		* 0 = left
+		* 500 = right (wood)
+	* y:
+		* 0 = front
+		* 410 = back
+* home is front left corner
+* this machine takes dwell P commands in seconds?
+* tub height needs to be below 7cm for the head to clear
