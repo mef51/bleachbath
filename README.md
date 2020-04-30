@@ -2,6 +2,7 @@ Bleach Bath
 ===========
 
 Automate a bleach bath
+
 First version by Jacob Bender
 
 To see cycle load gcode into http://chilipeppr.com/tinyg
@@ -18,6 +19,7 @@ Extents of the machine are:
 	* 0 = front
 	* 410mm = back
 
-Mount:
-	* needs tupperware (for liquids) with walls of height less than 7 cm
-	* adapter basket needs to be as low as possible. A wire mesh would be great
+Adapter Mount:
+
+* needs tupperware (for liquids) with walls of height less than 7 cm
+* adapter basket needs to be as low as possible. A wire mesh would be great
