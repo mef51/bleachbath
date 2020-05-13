@@ -25,3 +25,11 @@ apr 30
 * home is front left corner
 * this machine takes dwell P commands in seconds?
 * tub height needs to be below 7cm for the head to clear
+
+may 13
+=======
+* remade bed, got the right design, i just need it in more rigid material for it to be perfect
+* x-motor skips every 20 motions. reducing feed rate to F2000 seems to fix problem
+* bed is not really rigid enough to hold more than 5 or so adapters
+* need to raise bath tubs as high as possible so that adapters are submerged
+* need bleach
