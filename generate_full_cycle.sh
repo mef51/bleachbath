@@ -7,9 +7,9 @@ if [ -z "$1" ]
 fi
 
 OUTPUT=bleachrinse_"$1"_times.gcode
-LOOP_POINT=$(awk '/Loop here/{print NR; exit}' cycle.template)
-HEADER=$(head -n `expr "$LOOP_POINT" - 1` cycle.template)
-SINGLE_CYCLE=$(tail -n +"$LOOP_POINT" cycle.template)
+LOOP_POINT=$(awk '/Loop here/{print NR; exit}' cycle.gcode)
+HEADER=$(head -n `expr "$LOOP_POINT" - 1` cycle.gcode)
+SINGLE_CYCLE=$(tail -n +"$LOOP_POINT" cycle.gcode)
 echo "$HEADER" > "$OUTPUT"
 
 i=1

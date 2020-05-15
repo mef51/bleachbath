@@ -33,3 +33,21 @@ may 13
 * bed is not really rigid enough to hold more than 5 or so adapters
 * need to raise bath tubs as high as possible so that adapters are submerged
 * need bleach
+
+may 14
+====
+* ratio: 2 l of water: 100ml bleach
+* est time for 50 washes: 11mins * 50 cycles: 9 hours 10 minutes
+* RUN #1 5:28pm:
+	* 5 adapters
+	* bleach bath has 2.75L water, ~140ml bleach
+	* camera snapshot every 30s (1100 imgs, sd card capacity: ~1400)
+	* vent on
+
+may 15
+====
+
+* replaced bed with mesh, 3d printed bit, and zip tying the adapters to the mesh from underneath
+* need to prevent rotation
+* plastic bit is okay but might snap
+* still need to make grille for fan
