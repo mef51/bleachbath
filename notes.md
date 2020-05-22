@@ -51,3 +51,45 @@ may 15
 * need to prevent rotation
 * plastic bit is okay but might snap
 * still need to make grille for fan
+
+may 22
+====
+* prevented rotation with posts
+* got m6 threaded rod for spindle attachment, very solid now
+* need to check levelling of bed? or get flat bins
+
+Protocol:
+
+If starting from scratch start at Step 0. Otherwise start at Step 2:
+
+0. Prepare 2 empty bins: a left bin for holding bleach solution and a right bin for holding water rinse. Do not fill with liquid yet.
+
+1. Attach 5 Bipap Adapters to the underside of the mesh using zip ties.
+	a. Orient so that lettering faces away from mesh, and adapter sits flat on mesh
+
+2. Attach mesh to spindle, ensure tightness by tightening collet as well as nut below mesh
+
+3. Home the CNC Router:
+	a. The gcode that runs the router assumes that the "Home" position (where x = y = z = 0mm) is along the midpoint of the left edge, with the head in the "submerged" position.
+	b. First Home the z-axis by ensuring there are no obstacles and jogging the head until the adapters are sufficiently pressed against the bottom of the bin. Register this position as z = 0mm.
+	c. With the head in the submerged position, Ensure that there is at least 61 mm between the top of the head and the bottom of the z-track. The Gcode will raise the spindle by 61mm from the submerged position, and this will ensure there is enough room for it to rise.
+	d. Home the x-axis by jogging the router as far left as possible. Tolerance is 5mm. Register this as x = 0.
+	e. Home the y-axis by jogging the router to the middle of its track, roughly. The gcode will not move the router along the y-axis.
+
+4. Line up the bins
+	a. With no liquid, center the empty bins roughly at x = 10mm for the bleach bath and x = 350mm for the water rinse. Run testrun.gcode to line the bins up exactly as the head moves and dunks into each bath.
+
+5. Fill the bins with the least required amount of liquid to achieve submersion, and ensure that water does not creep up onto the mesh through the holes.
+	a. For the bleach bath: fill with approximately 1.70 L of water. Add 85 mL of bleach to achieve a 1:20 solution.
+	b. For the water rinse: fill with approximately 1.75 L of water. The difference is due to quirks in the bins and levelling of the router.
+	c. Place paper towel between baths to absorb drops from the adapters as they pass overhead, if desired.
+
+6. Start the gopro to take a snapshot every 30 or 60 seconds as desired. Consider positioning the camera such that you can assess submersion over the course of the test.
+
+7. Run bleachrinse_50_times.gcode. This will take approximately 9 hours to complete. Check periodically to ensure that
+	a. there is still enough liquid in the baths
+	b. the plastic mesh has not bend and is not hanging lower than it was initially.
+	c. the baths have not moved and the router is well aligned with them
+	d. If any of a, b, or c occur, stop the test and re-assess.
+
+
