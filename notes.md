@@ -92,4 +92,7 @@ If starting from scratch start at Step 0. Otherwise start at Step 2:
 	c. the baths have not moved and the router is well aligned with them
 	d. If any of a, b, or c occur, stop the test and re-assess.
 
+may 25
+====
 
+* made remote monitoring script

@@ -1,0 +1,4 @@
+*.key
+client_*.json
+*.auth
+snapshots/
