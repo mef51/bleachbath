@@ -16,8 +16,8 @@ folderid = open('folderid.key').readline().rstrip()
 outdir = 'snapshots'
 interval = 30 # seconds
 upload_to_drive = True
-CAMERA_INDEX = 0 # leave 0 unless you have more than one webcam
-
+CAMERA_INDEX = 1 # leave 0 unless you have more than one webcam
+cutoff_time = datetime(2020, 5, 28, 4, 0, 0, 0) # may 28 4 am
 
 # GOOGLE DRIVE
 g_login = GoogleAuth()
@@ -53,20 +53,27 @@ while rval:
 		nowdate = str(datetime.now().date())
 		outfile = '{}/{}_{}-{}.png'.format(outdir, RUN_TITLE, nowdate, nowtime)
 
-		cv2.imwrite(outfile, frame)
-		print('snap')
+		try:
+			cv2.imwrite(outfile, frame)
+			print('snap')
 
-		if upload_to_drive:
-			print('woosh')
-			with open(outfile, "r") as file:
-				file_drive = drive.CreateFile({
-					'title': os.path.basename(file.name),
-					'parents': [{'id': folderid }],
-				})
-				file_drive.SetContentFile(outfile)
-				file_drive.Upload()
+			if upload_to_drive:
+				print('woosh')
+				with open(outfile, "r") as file:
+					file_drive = drive.CreateFile({
+						'title': os.path.basename(file.name),
+						'parents': [{'id': folderid }],
+					})
+					file_drive.SetContentFile(outfile)
+					file_drive.Upload()
+		except Exception as e:
+			print(e)
 
 	i += 1
 	time.sleep(interval)
 
-vc.release()
+	if datetime.now() > cutoff_time:
+		vc.release()
+		exit()
+
+
