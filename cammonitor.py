@@ -9,7 +9,7 @@ from pydrive.drive import GoogleDrive
 import os
 
 
-RUN_TITLE = "TestRun"
+RUN_TITLE = "run01b"
 
 gauth_file = 'app.auth'
 folderid = open('folderid.key').readline().rstrip()
@@ -17,7 +17,7 @@ outdir = 'snapshots'
 interval = 30 # seconds
 upload_to_drive = True
 CAMERA_INDEX = 1 # leave 0 unless you have more than one webcam
-cutoff_time = datetime(2020, 5, 28, 4, 0, 0, 0) # may 28 4 am
+cutoff_time = datetime.now() + timedelta(hours=12) # 12 hours after start
 
 # GOOGLE DRIVE
 g_login = GoogleAuth()

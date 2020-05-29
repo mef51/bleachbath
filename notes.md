@@ -96,3 +96,14 @@ may 25
 ====
 
 * made remote monitoring script
+
+may 27
+===
+* Set up run01:
+	* START: 3pm
+	* Water bath: 2.05 L
+	* Bleach bath: 1.90L water, 100mL Bleach
+
+may 29
+===
+* run again (run01b) to get 100 total cycles
